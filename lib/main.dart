@@ -35,10 +35,7 @@ class MyHomePage extends StatefulWidget {
 
 class _MyHomePageState extends State<MyHomePage> {
   @override
-  void initState() {}
 
-  QRViewController? controller;
-  final GlobalKey qrKey = GlobalKey(debugLabel: 'QR');
   WebViewController? _webViewController;
 
   Widget buildWebView() {
@@ -68,7 +65,7 @@ class _MyHomePageState extends State<MyHomePage> {
               }),
             );
             final script =
-                "document.getElementById('value').innerText=\"${result}\"";
+                "document.getElementById('value').innerText=\"${"result : " + result}\"";
             _webViewController?.evaluateJavascript(script);
           },
         )
@@ -147,7 +144,8 @@ class _QRViewExampleState extends State<QRViewExample> {
     });
     controller.scannedDataStream.listen((scanData) async {
       //result = scanData;
-      controller.pauseCamera();
+      //controller.pauseCamera();
+      controller.dispose();
       Navigator.pop(context, scanData.code);
     });
   }
