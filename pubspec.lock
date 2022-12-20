@@ -63,7 +63,7 @@ packages:
     source: sdk
     version: "0.0.0"
   flutter_lints:
-    dependency: "direct dev"
+    dependency: "direct overridden"
     description:
       name: flutter_lints
       url: "https://pub.dartlang.org"
@@ -129,7 +129,7 @@ packages:
     source: hosted
     version: "2.1.3"
   qr_code_scanner:
-    dependency: "direct dev"
+    dependency: "direct overridden"
     description:
       name: qr_code_scanner
       url: "https://pub.dartlang.org"
@@ -182,6 +182,15 @@ packages:
       url: "https://pub.dartlang.org"
     source: hosted
     version: "0.4.9"
+  test_qrcode_module:
+    dependency: "direct overridden"
+    description:
+      path: "."
+      ref: HEAD
+      resolved-ref: "54c2b4c8b1e6182d2fc295bda714e76bfc24494a"
+      url: "https://github.com/moonpoppap/flutter_module_test"
+    source: git
+    version: "1.0.0+1"
   vector_math:
     dependency: transitive
     description:
